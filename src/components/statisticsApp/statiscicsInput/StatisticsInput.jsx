@@ -12,6 +12,7 @@ const StatisticsInputSection = ({ options, onLeaveFeedback }) => (
     <StatisticsInputList>
       {options.map(item => (
         <StatisticsInputBtn
+          key={item.title}
           type="button"
           onClick={onLeaveFeedback(item.onLeaveFeedbackKey)}
         >
