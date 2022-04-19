@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   StatisticsOutput,
   StatisticsOutputName,
@@ -31,5 +32,13 @@ const StatisticsView = ({ good, neutral, bad, total, feedbackPercentage }) => (
     </StatisticsOutputList>
   </StatisticsOutput>
 );
+
+StatisticsView.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.func.isRequired,
+  feedbackPercentage: PropTypes.func.isRequired,
+};
 
 export default StatisticsView;

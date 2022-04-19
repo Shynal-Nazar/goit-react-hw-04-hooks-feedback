@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   StatisticsInputList,
   StatisticsInputName,
@@ -22,5 +23,10 @@ const StatisticsInputSection = ({ options, onLeaveFeedback }) => (
     </StatisticsInputList>
   </StatisticsInput>
 );
+
+StatisticsInputSection.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.object),
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
 
 export default StatisticsInputSection;

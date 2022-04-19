@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Nofeedback from '../noFeedback/Nofeedback';
 import StatisticsView from '../statiscicsView/StatisticsView';
 
@@ -19,6 +20,12 @@ const StatisticsOutputSection = ({ good, neutral, bad }) => {
       feedbackPercentage={countPositiveFeedbackPercentage}
     />
   );
+};
+
+StatisticsOutputSection.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
 };
 
 export default StatisticsOutputSection;
